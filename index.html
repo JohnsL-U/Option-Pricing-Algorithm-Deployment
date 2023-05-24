@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Option Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            Spot price in $ (S): <input type="text" name="S"><br>
+            Strike price in $ (K): <input type="text" name="K"><br>
+            Time to maturity in days (T): <input type="text" name="T"><br>
+            Interest rate (r): <input type="text" name="r"><br>
+            Dividend yield (q): <input type="text" name="q"><br>
+            Volatility (sigma): <input type="text" name="sigma"><br>
+            <input type="submit" value="Calculate">
+        </form>
+        {% if call_price is defined and put_price is defined %}
+            <p>Call Option Price: {{ call_price }}</p>
+            <p>Put Option Price: {{ put_price }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+

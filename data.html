@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results Display</h1>
+    <table>
+        <tr>
+            <th>S</th>
+            <th>K</th>
+            <th>T</th>
+            <th>r</th>
+            <th>q</th>
+            <th>sigma</th>
+            <th>Call Price</th>
+            <th>Put Price</th>
+        </tr>
+        <tr>
+            <td>{{ data.S }}</td>
+            <td>{{ data.K }}</td>
+            <td>{{ data.T }}</td>
+            <td>{{ data.r }}</td>
+            <td>{{ data.q }}</td>
+            <td>{{ data.sigma }}</td>
+            <td>{{ data.call_price }}</td>
+            <td>{{ data.put_price }}</td>
+        </tr>
+    </table>
+</body>
+</html>
