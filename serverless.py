@@ -43,7 +43,7 @@ def lambda_handler(event, context):
 
     S = data['S']
     K = data['K']
-    T = data['T']
+    T = round(data['T'], 3)
     r = data['r']
     q = data['q']
     sigma = data['sigma']
