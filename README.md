@@ -38,7 +38,7 @@ To set up and deploy the Option Pricing Algorithm on an EC2 instance in AWS, fol
 4. Configure the AWS services:
 
 - Create an S3 bucket to store input and output JSON files.
-- Set up an AWS Lambda function to process the option pricing calculation.
+- Set up an AWS Lambda function (copy serverless.py) to process the option pricing calculation.
 - Configure the S3 bucket events to trigger the Lambda function upon file upload.
 
 5. Update the Flask application configuration:
